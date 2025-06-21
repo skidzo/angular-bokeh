@@ -109,7 +109,7 @@ http://localhost:9000/
 
 ## Meta
 
-Twitter – [@eckjoh2](https://twitter.com/eckjoh2) – contact@nucos.de
+contact@nucos.de
 
 [https://github.com/NuCOS](https://github.com/NuCOS)
 
