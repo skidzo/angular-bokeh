@@ -32,29 +32,16 @@ the minimal example, even written as a member function, looks very simple (chart
 
 OS X & Linux & Windows:
 
-Install Anaconda and open a conda enabled shell:
+Install Anaconda and open a conda-enabled shell, then create the environment:
 
 ```bash
-
-After installing dependencies you can run Angular unit and end-to-end tests:
-
-```bash
-cd client
-npm test --silent
-npm run e2e --silent
-```
-
-Python tests can be added under `python/tests` and executed with `pytest`.
-
 conda create -n angular-bokeh python=3.8 simplejson "bokeh>=3.0" aiohttp
 conda activate angular-bokeh
 pip install -r requirements.txt
 ```
 
-
-Angular 12 requires Node.js **16.x**. Before running the setup script make sure
-this version is installed system-wide. On Debian/Ubuntu based systems you can
-use the NodeSource packages:
+Angular 12 requires **Node.js 16**. If it is not already installed system‑wide,
+you can use the NodeSource packages on Debian/Ubuntu:
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -68,9 +55,19 @@ dependencies in one step by running the provided setup script:
 ./setup.sh
 ```
 
-If you install the Node dependencies manually, run `npm install --legacy-peer-deps`
-to avoid Angular peer dependency conflicts. The provided `./setup.sh` script
-already uses this flag.
+This script invokes `npm install --legacy-peer-deps`. If you install the Node
+dependencies manually, run the same command to avoid Angular peer dependency
+conflicts.
+
+After installing dependencies you can run Angular unit and end-to-end tests:
+
+```bash
+cd client
+npm test --silent
+npm run e2e --silent
+```
+
+Python tests can be added under `python/tests` and executed with `pytest`.
 
 This repository now targets **Bokeh 3.x** and **Angular 12**. Make sure the
 Bokeh-JS version referenced in `client/src/index.html` matches the installed
